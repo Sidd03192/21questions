@@ -5,14 +5,22 @@
 import java.util.*;
 public class QuestionsGame {
     // Your code here
-
+    QuestionNode monkey;
     public QuestionsGame(String object) {
         // initilize a new QuetionsGame object with a single leaf node representing the object object. 
-        QuestionNode monkey = new QuestionNode(object);
+         monkey = new QuestionNode(object);
 
     }
     public QuestionsGame(Scanner input){
-        while(input.hasNext()){
+        if(input.hasNext()){
+            input.nextLine();
+            
+            monkey.left =new QuestionNode(input.nextLine());
+            
+            
+
+
+
 
         }
     }
