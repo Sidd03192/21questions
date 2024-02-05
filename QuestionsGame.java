@@ -39,5 +39,15 @@ public class QuestionsGame {
             this.data = data;
             this.left = left;
             this.right = right;
+        }
+
+        public void saveQuestions(PrintStream output){
+
+        }
+
+        public void play(){
+            
+        }
+
     }
 }
