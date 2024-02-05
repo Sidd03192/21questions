@@ -2,6 +2,7 @@
 //
 // You should delete this comment and replace it with your class
 // header comment.
+import java.io.PrintStream;
 import java.util.*;
 public class QuestionsGame {
     // Your code here
@@ -42,11 +43,14 @@ public class QuestionsGame {
         }
 
         public void saveQuestions(PrintStream output){
-
+            if(output == null){
+                throw new IllegalArgumentException();
+            }
+            output = new PrintStream(new File("spec-questions.txt"));
         }
 
         public void play(){
-            
+
         }
 
     }
