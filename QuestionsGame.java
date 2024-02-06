@@ -90,7 +90,7 @@ public class QuestionsGame {
 
         Scanner keyboard = new Scanner (System.in); // creates new scanner called keyboard
          QuestionNode temp = Panda;
-
+        play(temp);
 
         // while ( temp!=null)
         // {
@@ -128,6 +128,11 @@ public class QuestionsGame {
 
 
 
+        }
+        private void play(QuestionNode chineseMonkey){
+            
+
+            
         }
 
 
