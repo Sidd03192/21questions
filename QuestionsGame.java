@@ -92,38 +92,38 @@ public class QuestionsGame {
          QuestionNode temp = Panda;
 
 
-        while ( temp!=null)
-        {
-            System.out.println(temp.data + "(y/n)");
-            // while they dont wanna exit ( if they type in yes  or y )    
-            if (keyboard.nextLine().trim().toLowerCase().startsWith("y"))
-            {
-                temp = temp.left;
-                if (temp .left==null)
-                {
-                    System.out.println(" I guess that your object is " + temp.data+ "!");
-                    System.out.println("Am I right?");
-                    if (keyboard.nextLine().trim().toLowerCase().startsWith("y"))
-                    {
-                        System.out.println("Awesome! I win!");
-                    }
-                    else 
-                    {
-                        System.out.println("Boo! I Lose. Please help me get better!");
-                        System.out.println("What is your object?");
-                         String a = keyboard.nextLine();
-                        System.out.println("Please give me a yes/no question that distinguishes between "+ a +" and"+ temp.data+".");
-                         String q = keyboard.next();
-                        System.out.println("Is the answer \"yes\" for car? (y/n)?");                     
-                         String ans  = keyboard.next();
-                    }  
+        // while ( temp!=null)
+        // {
+        //     System.out.println(temp.data + "(y/n)");
+        //     // while they dont wanna exit ( if they type in yes  or y )    
+        //     if (keyboard.nextLine().trim().toLowerCase().startsWith("y"))
+        //     {
+        //         temp = temp.left;
+        //         if (temp .left==null)
+        //         {
+        //             System.out.println(" I guess that your object is " + temp.data+ "!");
+        //             System.out.println("Am I right?");
+        //             if (keyboard.nextLine().trim().toLowerCase().startsWith("y"))
+        //             {
+        //                 System.out.println("Awesome! I win!");
+        //             }
+        //             else 
+        //             {
+        //                 System.out.println("Boo! I Lose. Please help me get better!");
+        //                 System.out.println("What is your object?");
+        //                  String a = keyboard.nextLine();
+        //                 System.out.println("Please give me a yes/no question that distinguishes between "+ a +" and"+ temp.data+".");
+        //                  String q = keyboard.next();
+        //                 System.out.println("Is the answer \"yes\" for car? (y/n)?");                     
+        //                  String ans  = keyboard.next();
+        //             }  
 
-                }
+        //         }
                 
-            }
-            else{
-                temp=temp.right;
-            }
+        //     }
+        //     else{
+        //         temp=temp.right;
+        //     }
             
 
 
