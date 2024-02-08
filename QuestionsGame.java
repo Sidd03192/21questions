@@ -21,10 +21,6 @@ public class QuestionsGame {
         input = new Scanner(new File("spec-questions.txt"));
         
         overallRoot = makeTree( input);
-        
-        
-        
-
     }
     private QuestionNode makeTree (Scanner input) throws FileNotFoundException{
        
@@ -75,7 +71,14 @@ public class QuestionsGame {
         saveQuestions(output, overallRoot);
     }
     private void saveQuestions(PrintStream output, QuestionNode root){
-        output.append(root.data + " ");
+        if(root.left == null){
+            output.append("A: \n");
+            output.append(root.data + " \n");
+        }
+        else if(root.left != null){
+            output.append("Q: \n");
+            output.append(root.data + " \n");
+        }
 
 
         if(root.left != null) {
@@ -109,7 +112,7 @@ public class QuestionsGame {
                 QuestionNode current = temp.left; // this is the node that are looking at
                 if ( current.left==null) // if the node we are lookign at doesnt have children, then we do end case
                     {
-                        System.out.println(" I guess that your object is " + current.data+ "!");
+                        System.out.println("I guess that your object is " + current.data+ "!");
                         System.out.println("Am I right?");
                         if (keyboard.nextLine().trim().toLowerCase().startsWith("y"))
                         {
@@ -120,7 +123,7 @@ public class QuestionsGame {
                             System.out.println("Boo! I Lose. Please help me get better!");
                             System.out.println("What is your object?");
                             String newObject = keyboard.nextLine();
-                            System.out.println("Please give me a yes/no question that distinguishes between "+ newObject +" and"+ current.data+".");
+                            System.out.println("Please give me a yes/no question that distinguishes between "+ newObject +" and "+ current.data+".");
                             String newQuestion = keyboard.nextLine();
                             System.out.println("Is the answer \"yes\" for "+newObject +"? (y/n)?");                    
                             String ans  = keyboard.nextLine(); // tells us if we need to put it on the left or right
@@ -158,7 +161,7 @@ public class QuestionsGame {
                 QuestionNode current = temp.right;
                 if (current.left==null) // end case
                 {
-                    System.out.println(" I guess that your object is " + current.data+ "!");
+                    System.out.println("I guess that your object is " + current.data+ "!");
                     System.out.println("Am I right?");
                     if (keyboard.nextLine().trim().toLowerCase().startsWith("y"))
                     {
@@ -169,7 +172,7 @@ public class QuestionsGame {
                         System.out.println("Boo! I Lose. Please help me get better!");
                         System.out.println("What is your object?");
                         String newObject = keyboard.nextLine();
-                        System.out.println("Please give me a yes/no question that distinguishes between "+ newObject +" and"+ current.data+".");
+                        System.out.println("Please give me a yes/no question that distinguishes between "+ newObject +" and "+ current.data+".");
                         String newQuestion = keyboard.nextLine();
                         System.out.println("Is the answer \"yes\" for "+newObject +"? (y/n)?");                    
                         String ans  = keyboard.nextLine(); // tells us if we need to put it on the left or right

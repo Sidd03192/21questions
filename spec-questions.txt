@@ -1,1 +1,26 @@
-Is it an animal? Can it fly? bird Does it have a tail? mouse spider Does it have wheels? does it have two wheels  bicycle car Is it nice? TA teacher 
+Q: 
+Is it an animal? 
+Q: 
+Can it fly? 
+A: 
+bird 
+Q: 
+Does it have a tail? 
+A: 
+mouse 
+A: 
+spider 
+Q: 
+Does it have wheels? 
+Q: 
+t2 wheel 
+A: 
+bicycle 
+A: 
+car 
+Q: 
+Is it nice? 
+A: 
+TA 
+A: 
+teacher 
